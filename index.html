@@ -2,10 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПУЛЬС БАНК — мобильное приложение</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>ПУЛЬС БАНК</title>
     <style>
-        /* ===== ОБНУЛЕНИЕ И БАЗА ===== */
         * {
             margin: 0;
             padding: 0;
@@ -13,208 +12,210 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0a2b1e 0%, #1a4d2e 100%);
+            background-color: #101010;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            padding: 40px 20px;
+            min-height: 100vh;
+            padding: 24px 20px 60px;
+        }
+
+        /* Основной контейнер — тёмный, как на картинке */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #101010;
             min-height: 100vh;
         }
 
-        /* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
-        .screen {
-            max-width: 1300px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 48px;
-            padding: 48px 40px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-
-        /* ===== ВЕРХНЯЯ ЧАСТЬ (ЛОГО + МЕНЮ В ОДНУ СТРОКУ) ===== */
+        /* ===== ШАПКА ===== */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 60px;
-            border-bottom: 2px solid #eef2f0;
-            padding-bottom: 20px;
+            padding: 16px 0 24px;
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 32px;
         }
 
-        .image {
-            max-width: 180px;
-            height: auto;
-            display: block;
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
         }
 
-        /* Меню в шапке */
-        .nav-menu {
-            display: flex;
-            gap: 40px;
-        }
-
-        .text-wrapper {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2c5a3e;
+        .menu-icon {
+            font-size: 24px;
+            color: white;
             cursor: pointer;
-            transition: color 0.2s;
-            letter-spacing: 0.3px;
         }
 
-        .text-wrapper:hover {
-            color: #0a7c3e;
-        }
-
-        /* ===== ЗАГОЛОВКИ ПОСЛЕ ШАПКИ ===== */
-        .title-section {
+        /* ===== БЛОК С ЗАГОЛОВКОМ (как на картинке) ===== */
+        .hero {
+            text-align: center;
             margin-bottom: 48px;
         }
 
-        .div {
-            font-size: 56px;
+        .hero-subtitle {
+            color: #2ecc71;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-size: 48px;
             font-weight: 800;
-            color: #0a2b1e;
+            color: white;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
             margin-bottom: 16px;
-            letter-spacing: -1px;
         }
 
-        .text-wrapper-2 {
-            font-size: 22px;
-            font-weight: 500;
-            color: #4a6a5a;
-            border-left: 4px solid #2ecc71;
-            padding-left: 20px;
+        .hero-title span {
+            color: #2ecc71;
         }
 
-        /* ===== СЕТКА УСЛУГ — УВЕЛИЧЕННЫЕ КНОПКИ ===== */
+        .hero-description {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.5;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        /* ===== КАРТОЧКИ УСЛУГ — как на картинке ===== */
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background-color: #1a1a1a;
+            border-radius: 16px;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #2a2a2a;
+        }
+
+        .service-card:hover {
+            background-color: #222;
+            border-color: #2ecc71;
+        }
+
+        .service-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .service-arrow {
+            font-size: 20px;
+            color: #2ecc71;
+        }
+
+        /* ===== НИЖНЕЕ МЕНЮ (О НАС, КОНТАКТЫ и т.д.) ===== */
+        .bottom-menu {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 32px;
+            border-top: 1px solid #2a2a2a;
             margin-top: 20px;
         }
 
-        /* БОЛЬШИЕ КНОПКИ (шрифт остался 18px, но отступы увеличены) */
-        .frame-2, .frame-3, .frame-4, .frame-5,
-        .frame-6, .frame-7, .frame-8, .frame-9, .frame-10 {
-            background: #f8faf7;
-            padding: 48px 20px;
-            text-align: center;
-            border-radius: 28px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a3d2c;
-            transition: all 0.3s ease;
+        .bottom-menu-item {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-            border: 1px solid #e2e8e2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 140px;
+            transition: color 0.2s;
         }
 
-        .frame-2:hover, .frame-3:hover, .frame-4:hover, .frame-5:hover,
-        .frame-6:hover, .frame-7:hover, .frame-8:hover, .frame-9:hover, .frame-10:hover {
-            transform: translateY(-6px);
-            background: white;
-            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
-            border-color: #2ecc71;
-            color: #0a7c3e;
+        .bottom-menu-item:hover {
+            color: #2ecc71;
         }
 
-        /* ===== АДАПТАЦИЯ ПОД ПЛАНШЕТ ===== */
-        @media (max-width: 1000px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 24px;
-            }
-            .screen {
-                padding: 32px 24px;
-            }
-            .div {
-                font-size: 42px;
-            }
-            .frame-2, .frame-3, .frame-4, .frame-5,
-            .frame-6, .frame-7, .frame-8, .frame-9, .frame-10 {
-                padding: 40px 16px;
-                min-height: 120px;
-            }
+        /* Акцентный текст */
+        .accent-text {
+            color: #2ecc71;
         }
 
-        /* ===== АДАПТАЦИЯ ПОД ТЕЛЕФОН ===== */
-        @media (max-width: 700px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .nav-menu {
-                gap: 24px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .div {
-                font-size: 32px;
-                text-align: center;
-            }
-            .screen {
-                padding: 24px 20px;
-                border-radius: 32px;
-            }
-            .text-wrapper-2 {
-                font-size: 18px;
-                margin-bottom: 32px;
-                text-align: center;
-                border-left: none;
-                padding-left: 0;
-            }
-            .frame-2, .frame-3, .frame-4, .frame-5,
-            .frame-6, .frame-7, .frame-8, .frame-9, .frame-10 {
-                padding: 32px 12px;
-                min-height: 100px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+        /* Дополнительные стили */
+        .section-title {
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
-<div class="screen">
-    <!-- ШАПКА: логотип + меню в одну строку -->
+<div class="container">
+    <!-- Шапка -->
     <div class="header">
-        <img class="image" src="image-5.png" alt="ПУЛЬС БАНК логотип" onerror="this.style.display='none'">
-        <div class="nav-menu">
-            <div class="text-wrapper">О НАС</div>
-            <div class="text-wrapper">СТОИМОСТЬ УСЛУГ</div>
-            <div class="text-wrapper">КОНТАКТЫ</div>
+        <div class="logo">ПУЛЬС БАНК</div>
+        <div class="menu-icon">☰</div>
+    </div>
+
+    <!-- Главный блок с заголовком (как на картинке) -->
+    <div class="hero">
+        <div class="hero-subtitle">ПРИЛОЖЕНИЕ</div>
+        <div class="hero-title">
+            ПУЛЬС <span>БАНК</span>
+        </div>
+        <div class="hero-description">
+            Управляй финансами<br>в одном приложении
         </div>
     </div>
-    
-    <!-- Заголовки после шапки -->
-    <div class="title-section">
-        <div class="div">ПУЛЬС БАНК</div>
-        <div class="text-wrapper-2">Приложение, которое управляет вашими финансами</div>
-    </div>
-    
-    <!-- Сетка услуг (увеличенные кнопки) -->
+
+    <!-- Список услуг — как на картинке (в столбик) -->
     <div class="services-grid">
-        <div class="frame-2">📱 ПЛАТЕЖИ</div>
-        <div class="frame-3">💰 БЮДЖЕТ</div>
-        <div class="frame-4">📈 ВКЛАДЫ</div>
-        <div class="frame-5">💎 КЭШБЕКИ</div>
-        <div class="frame-6">🔄 ПЕРЕВОДЫ</div>
-        <div class="frame-7">🎯 ЦЕЛИ</div>
-        <div class="frame-8">🏦 КРЕДИТЫ</div>
-        <div class="frame-9">📊 АНАЛИТИКА</div>
+        <div class="service-card">
+            <span class="service-name">ВКЛАДЫ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">ЦЕЛИ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">БЮДЖЕТ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">КЭШБЕКИ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">КРЕДИТЫ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">ПЕРЕВОДЫ</span>
+            <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card">
+            <span class="service-name">АНАЛИТИКА</span>
+            <span class="service-arrow">→</span>
+        </div>
+    </div>
+
+    <!-- Нижнее меню (О НАС, СТОИМОСТЬ УСЛУГ, КОНТАКТЫ и т.д.) -->
+    <div class="bottom-menu">
+        <div class="bottom-menu-item">О НАС</div>
+        <div class="bottom-menu-item">СТОИМОСТЬ УСЛУГ</div>
+        <div class="bottom-menu-item">КОНТАКТЫ</div>
+        <div class="bottom-menu-item">ПОЛИТИКА</div>
     </div>
 </div>
 </body>
