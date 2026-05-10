@@ -1,0 +1,249 @@
+.screen {
+  background-color: #101010;
+  width: 100%;
+  min-width: 1920px;
+  min-height: 2434px;
+  position: relative;
+}
+
+.screen .image {
+  position: absolute;
+  top: 99px;
+  left: 116px;
+  width: 1687px;
+  height: 881px;
+  aspect-ratio: 1.91;
+  object-fit: cover;
+}
+
+.screen .frame {
+  display: inline-flex;
+  padding: 18px 59px;
+  top: 99px;
+  left: calc(50.00% - 844px);
+  background-color: #3355ed;
+  border-radius: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .div {
+  position: absolute;
+  top: 796px;
+  left: 192px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 102px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .text-wrapper-2 {
+  position: absolute;
+  top: 106px;
+  left: 594px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 43px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .div-wrapper {
+  display: inline-flex;
+  padding: 18px 59px;
+  top: 99px;
+  left: calc(50.00% + 204px);
+  background-color: #3d3d3d;
+  border-radius: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-2 {
+  display: inline-flex;
+  padding: 18px 59px;
+  top: 99px;
+  left: calc(50.00% + 590px);
+  background-color: #3d3d3d;
+  border-radius: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .text-wrapper-3 {
+  position: absolute;
+  top: 706px;
+  left: 192px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 43px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .frame-3 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1152px;
+  left: 100px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 43px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.screen .frame-4 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1536px;
+  left: 100px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-5 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1152px;
+  left: 690px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-6 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1536px;
+  left: 690px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-7 {
+  display: flex;
+  width: 822px;
+  height: 295px;
+  padding: 10px;
+  top: 1920px;
+  left: 100px;
+  border-radius: 33px;
+  background: linear-gradient(
+    270deg,
+    rgba(51, 85, 237, 1) 0%,
+    rgba(51, 188, 237, 1) 100%
+  );
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-8 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1152px;
+  left: 1280px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-9 {
+  display: flex;
+  width: 540px;
+  height: 295px;
+  padding: 10px;
+  top: 1536px;
+  left: 1280px;
+  border-radius: 33px;
+  border: 2px solid;
+  border-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
+
+.screen .frame-10 {
+  display: flex;
+  width: 822px;
+  height: 295px;
+  padding: 10px;
+  top: 1920px;
+  left: 998px;
+  border-radius: 33px;
+  background: linear-gradient(
+    270deg,
+    rgba(51, 85, 237, 1) 0%,
+    rgba(51, 188, 237, 1) 100%
+  );
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+}
